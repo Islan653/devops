@@ -25,7 +25,7 @@ pipeline {
 
         stage('Executar testes') {
             steps {
-                sh "mvn clean test -Dtest=runner.RunCucumberTest -Dcucumber.filter.tags=${params.TAGS}"
+                bat "mvn clean test -Dtest=runner.RunCucumberTest -Dcucumber.filter.tags=${params.TAGS}"
             }
         }
 
