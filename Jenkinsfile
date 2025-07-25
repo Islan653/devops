@@ -47,7 +47,7 @@ pipeline{
 		always{
 			script{
 				try{
-					archiveArtifacts: 'target/evidencias/**/*.png', fingerprint: true
+					archiveArtifacts artifacts: 'target/evidencias/**/*.png', fingerprint: true
 				} cath(err){
 					echo "Nenhuma evidência encontrada para arquivar."
 				}
